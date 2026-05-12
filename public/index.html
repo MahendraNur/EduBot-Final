@@ -17,9 +17,14 @@
     </div>
     <div class="input-area">
       <form id="chat-form">
-        <input type="text" id="user-input" placeholder="Tanya tentang SD, SMP, SMK, atau Kuliah..." autocomplete="off" required />
+        <input type="file" id="file-input" accept="image/*, .pdf, .txt, audio/*" style="display: none;" />
+        
+        <button type="button" id="file-btn" style="padding: 0 15px; border-radius: 50%;" title="Upload Gambar, PDF, atau Audio">📎</button>
+        
+        <input type="text" id="user-input" placeholder="Tanya atau lampirkan file (Brosur/PDF/Audio)..." autocomplete="off" />
         <button type="submit">Tanya</button>
       </form>
+      <small id="file-name" style="display: block; margin-top: 5px; color: var(--secondary);"></small>
     </div>
   </div>
   <script src="script.js"></script>
