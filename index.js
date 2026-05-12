@@ -48,3 +48,5 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`EduBot SIAP! Akses langsung di: http://localhost:${PORT}`);
 });
+
+export default app;
