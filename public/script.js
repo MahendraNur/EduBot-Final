@@ -21,7 +21,7 @@ form.addEventListener('submit', async function (e) {
   appendMessage('bot', 'EduBot sedang mengetik...', loadingId, false);
 
   try {
-    const response = await fetch('http://localhost:3000/generate-text', {
+    const response = await fetch('/generate-text', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ function appendMessage(sender, text, id = null, isHtml = false) {
   msg.classList.add('message', sender);
   
   if (isHtml) {
-    msg.innerHTML = formatText(text); // Pakai innerHTML jika teks diformat
+    msg.innerHTML = formatText(text);
   } else {
     msg.textContent = text;
   }
